@@ -142,7 +142,9 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
@@ -154,23 +156,18 @@ ol {
 
 .search-form__pseudo-checkbox::before {
   content: ""; 
-  display: inline-block;
   width: 15px;
   height: 15px;
   background-color: #FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 0.2 ease-in;
+  opacity: 0;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .search-form__checkbox:active + .search-form__pseudo-checkbox::before {
-  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .button {
